@@ -18,3 +18,4 @@ jobs:
           AWS_REGION: 'us-east-1'
           SOURCE_DIR: './'
           DEST_DIR: ''
+          
