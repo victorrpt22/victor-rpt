@@ -29,4 +29,3 @@ jobs:
           AWS_REGION: 'us-east-1'
           SOURCE_DIR: './dist'
           DEST_DIR: ''
-      - run: ls
