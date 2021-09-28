@@ -1,23 +1,11 @@
 import {useState} from 'react'
-
+import NavBar from './components/navbar/navbar'
 const App = () => {
 
-    const [counter, setCounter] = useState(0)
-    const [values, setValues] = useState()
-    const handleClick = () => {
-        setCounter(counter + 1)
-        setValues(values.concat(counter))
-    }
-    return(<div className='container'>
-        <h1>Portafolio en construcción.</h1>
-        <button onClick={handleClick}>
-            Click to add
-        </button>
-        <div>
-            <strong>
-                {counter}
-            </strong>
-        </div>
+     return(
+    <div className='container'>
+        <NavBar />
+        <h1 className='text-center'>Portafolio en construcción.</h1>
     </div>)
 }
 export default App
