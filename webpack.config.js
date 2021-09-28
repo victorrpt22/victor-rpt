@@ -4,8 +4,26 @@ const path=require('path')
 const styleRules={
     test: /\.css$/,
     use: ['style-loader', 'css-loader'],
-
 }
+
+const scssRules={
+    test: /\.(scss)$/,
+    use: [
+        'style-loader', 
+        'css-loader',
+        {
+            loader: 'postcss-loader',
+            options: {
+                postcssOptions: {
+                    plugins: function(){
+                        return [require('autoprefixer')];
+                    }
+                }
+            }
+        }, 
+        'sass-loader'
+    ]
+} 
 
 const javascrptRules={
     test: /\.js$/,
@@ -23,7 +41,7 @@ const javascrptRules={
     }
 }
 
-const rules = [javascrptRules, styleRules]
+const rules = [javascrptRules, styleRules,scssRules]
 
 module.exports = (env, argv) => {
     const {mode} = argv
