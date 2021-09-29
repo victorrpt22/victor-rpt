@@ -46,7 +46,7 @@ jobs:
           DEST_DIR: ''
   invalidate:
     needs: deploy
-    runs-on: ubuntu-latestt
+    runs-on: ubuntu-latest
     steps:
       - name: invalidate
         uses: chetan/invalidate-cloudfront-action@master
