@@ -1,6 +1,6 @@
 export default function NavBar(){
     return (
-        <nav className="nav nav-fill">
+        <nav className="nav nav-fill page-nav">
             <a className="nav-link active" aria-current="page" href="#">Home</a>
             <a className="nav-link" href="#">About</a>
             <a className="nav-link" href="#">Skills</a>
