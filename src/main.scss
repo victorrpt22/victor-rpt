@@ -7,11 +7,14 @@ $orange-web: #fca311ff;
 $platinum: #e5e5e5ff;
 $white: #ffffffff;
 
+body{
+    padding-top: 5.5rem;
+}
 .container {
     background-color: $white
 }
 .introducton{
-    
+
 }
 .page-nav{
     a{
