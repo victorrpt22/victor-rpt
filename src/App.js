@@ -1,13 +1,12 @@
 import {useState} from 'react'
-import NavBar from './components/navbar/navbar'
-import Home from './components/home/home'
+import Navigation from './components/navigation/navigation'
+import PageContent from './components/page-content/pageContent'
 const App = () => {
 
      return(
-    <div className='container'>
-        <NavBar />
-        <Home/>
-        <h1 className='text-center'>Portafolio en construcción.</h1>
+    <div id="page-top">
+        <Navigation />
+        <PageContent/>
     </div>)
 }
 export default App
