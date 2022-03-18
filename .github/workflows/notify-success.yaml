@@ -13,6 +13,7 @@ jobs:
         with:
           python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
       - run: echo 'The triggering workflow passed'
+      - run: pip install requests
       - run: python notify.py green
   on-failure:
     runs-on: ubuntu-latest
@@ -23,4 +24,5 @@ jobs:
         with:
           python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
       - run: echo 'The triggering workflow failed'
+      - run: pip install requests
       - run: python notify.py red
