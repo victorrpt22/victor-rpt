@@ -1,9 +1,7 @@
-from ast import Try
-import os
 import sys
 import requests
 headers = {
-    "Authorization": "Bearer %s" % os.environ['LIFX_TOKEN'],
+    "Authorization": "Bearer %s" % sys.argv[2],
 }
 
 data = {

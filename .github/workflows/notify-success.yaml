@@ -14,7 +14,7 @@ jobs:
           python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
       - run: echo 'The triggering workflow passed'
       - run: pip install requests
-      - run: python notify.py green
+      - run: python notify.py green ${{ secrets.LIFX_TOKEN }}
   on-failure:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
@@ -25,4 +25,4 @@ jobs:
           python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
       - run: echo 'The triggering workflow failed'
       - run: pip install requests
-      - run: python notify.py red
+      - run: python notify.py red ${{ secrets.LIFX_TOKEN }}
